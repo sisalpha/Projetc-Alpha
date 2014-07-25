@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>#{msgs.loginTitle}</title>
+
+	<h:outputStylesheet library="css" name="main.css" />
+	<!-- Bootstrap core CSS -->
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<!-- Bootstrap SignIn core CSS -->
+	<h:outputStylesheet library="css" name="signin.css" />
+</h:head>
+
+<h:body>
+	<div class="container">
+		<form method="post" action="j_security_check" class="form-signin"
+			role="form">
+			<h2 align="center" class="form-signin-heading">#{msgs.loginHello}</h2>
+			<input type="email" id="j_username" name="j_username"
+				class="form-control" placeholder="#{msgs.loginUserName}"
+				required="true" /> <input type="password" id="j_password"
+				name="j_password" class="form-control" required="true"
+				placeholder="#{msgs.loginPassword}" />
+
+			<h:panelGrid columns="2" style="width: 100%">
+				<h:panelGroup>
+					<div class="checkbox">
+						<label> <h:selectBooleanCheckbox type="checkbox"
+								value="remember-me" /> #{msgs.loginRemember}
+						</label>
+					</div>
+				</h:panelGroup>
+				<div align="right" class="checkbox">
+					#{msgs.loginForgotPassword}</div>
+			</h:panelGrid>
+			<input type="submit" name="submit" value="#{msgs.login}"
+				class="btn btn-lg btn-primary btn-block" />
+
+		</form>
+	</div>
+	<!-- /container -->
+</h:body>
+</html>

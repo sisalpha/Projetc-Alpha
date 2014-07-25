@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<link rel="icon" href="../../favicon.ico" />
+	<title>Dashboard Template for Bootstrap</title>
+
+	<!-- Bootstrap core CSS -->
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+
+	<!-- Custom styles for this template -->
+	<h:outputStylesheet library="css" name="sb-admin.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+
+	<!-- Page Specific CSS -->
+	<h:outputStylesheet library="css" name="morris-0.4.3.min.css" />
+
+	<!-- Bootstrap/jQuery core JavaScript
+    ================================================== -->
+	<h:outputScript library="javascript" name="jquery-1.11.1.min.js" />
+	<h:outputScript library="javascript" name="bootstrap.min.js" />
+
+</h:head>
+
+<h:body>
+	<f:view contentType="text/html; charset=UTF-8" encoding="UTF-8">
+		<div id="wrapper">
+
+
+			<ui:insert name="divTop">
+				<ui:include src="top-left.xhtml" />
+			</ui:insert>
+
+
+
+			
+				<p:growl id="messageGrowl" />
+				
+				
+				
+				<ui:insert name="divMain">
+					
+				</ui:insert>
+				
+				
+				
+				
+			
+			
+
+		</div>
+		<!-- /#wrapper -->
+
+	</f:view>
+</h:body>
+</html>
